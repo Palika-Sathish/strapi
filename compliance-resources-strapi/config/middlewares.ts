@@ -23,9 +23,16 @@ export default [
         'http://fnhatest.compliance365.org:4200', // Your test environment
         'https://fnhastage.compliance365.ca', // Your staging environment
       ],
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      headers: [
+        'Content-Type',
+        'Authorization',
+        'Origin',
+        'Accept',
+        'X-Requested-With', // Ensure this is allowed for requests with custom headers
+      ],
       keepHeaderOnError: true,
+      credentials: true, // Allow credentials if needed for session-based authentication
     },
   },
   'strapi::poweredBy',
