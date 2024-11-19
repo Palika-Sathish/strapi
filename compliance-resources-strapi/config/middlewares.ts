@@ -22,6 +22,7 @@ export default [
         'http://localhost:4200', // Your Angular development server
         'http://fnhatest.compliance365.org:4200', // Your test environment
         'https://fnhastage.compliance365.ca', // Your staging environment
+        'https://fnhatest.compliance365.ca',
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: [
