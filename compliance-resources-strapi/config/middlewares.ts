@@ -19,10 +19,10 @@ export default [
     name: 'strapi::cors',
     config: {
       origin: [
-        'http://localhost:4200', // Your Angular development server
-        'http://fnhatest.compliance365.org:4200', // Your test environment
-        'https://fnhastage.compliance365.ca', // Your staging environment
-        'https://fnhatest.compliance365.ca',
+        'http://localhost:4200', // Angular development server
+        'http://fnhatest.compliance365.org:4200', // Test environment
+        'https://fnhastage.compliance365.ca', // Staging environment
+        'https://fnhatest.compliance365.ca', // Production environment
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: [
@@ -30,10 +30,10 @@ export default [
         'Authorization',
         'Origin',
         'Accept',
-        'X-Requested-With', // Ensure this is allowed for requests with custom headers
+        'X-Requested-With', // Custom headers
       ],
       keepHeaderOnError: true,
-      credentials: true, // Allow credentials if needed for session-based authentication
+      credentials: true, // If using session-based authentication, this allows cookies/headers
     },
   },
   'strapi::poweredBy',
