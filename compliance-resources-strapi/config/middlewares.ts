@@ -5,7 +5,11 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:4200'], // Add the URL of your Angular app
+      origin: [
+        'http://fnhatest.compliance365.org:4200', 
+        'https://fnhastage.compliance365.ca',
+        'https://fnhatest.compliance365.ca'
+      ], // Add all your URLs here
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
       credentials: true,
