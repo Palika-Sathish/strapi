@@ -5,14 +5,10 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: [
-        'http://fnhatest.compliance365.org:4200', 
-        'https://fnhastage.compliance365.ca',
-        'https://fnhatest.compliance365.ca'
-      ], // Add all your URLs here
+      origin: '*', // Allow all origins
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
-      credentials: true,
+      credentials: true, // Enable if using cookies or session-based authentication
     },
   },
   'strapi::poweredBy',
